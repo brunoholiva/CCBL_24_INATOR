@@ -1,3 +1,6 @@
+"""Module for solving the 24 game using a recursive approach."""
+
+
 def _generate_operations(value1, expression1, value2, expression2):
     """
     Generate valid mathematical operations for a pair of numbers.
@@ -35,7 +38,7 @@ def _recurse(state, target, solutions):
     Parameters
     ----------
     state : list of tuple
-        The current pool of available numbers, formatted as (value, expression).
+        The current pool of available numbers, as (value, expression).
     target : int
         The target integer to reach.
     solutions : set

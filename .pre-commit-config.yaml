@@ -1,0 +1,25 @@
+repos:
+  - repo: https://github.com/PyCQA/docformatter
+    rev: v1.7.7
+    hooks:
+      - id: docformatter
+        args:
+          [
+            --in-place,
+            --wrap-summaries, "79",
+            --wrap-descriptions, "79",
+            --pre-summary-newline
+          ]
+
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        args: [--line-length=79]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4
+    hooks:
+      - id: ruff
+        args: [--fix]
+
